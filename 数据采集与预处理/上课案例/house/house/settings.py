@@ -62,10 +62,13 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "house.pipelines.HousePipeline": 300,
-#}
-
+ITEM_PIPELINES = {
+   "house.pipelines.MysqlPipeline": 300,
+}
+# 添加以下设置提高爬取可靠性
+ROBOTSTXT_OBEY = False  # 如需忽略robots.txt则设为False
+DOWNLOAD_DELAY = 1      # 添加下载延迟防止被屏蔽
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

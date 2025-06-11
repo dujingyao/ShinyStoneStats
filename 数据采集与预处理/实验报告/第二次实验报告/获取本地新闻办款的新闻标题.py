@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
     总体过程总结：
     1.# -*- coding: utf-8 -*-:告诉 Python 解释器该源代码文件使用 UTF-8 编码
@@ -15,7 +16,7 @@
       driver = webdriver.Chrome(service=service, options=options):
         使用上面的 service 和 options 初始化 Chrome 浏览器
         创建与浏览器的连接
-        返回可以控制浏览器的 WebDriver 实例
+        返回可以控制浏览器的 WebDriver 实例pip install selenium-wirepip install selenium-wire
     4.使用 driver.get() 方法打开指定的 URL
     5.使用 driver.find_element() 方法查找页面元素
     6.使用 driver.execute_script() 方法执行 JavaScript 代码：
@@ -24,10 +25,10 @@
         整体效果是将页面滚动到"切换城市"按钮可见的位置
     7.使用element.click()模拟鼠标点击element对应的位置
 """
-# -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+# from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # 正确初始化Chrome驱动
