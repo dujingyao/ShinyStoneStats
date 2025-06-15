@@ -44,9 +44,9 @@ if __name__=="__main__":
     for i in range(1,4):
         url=start_url+str(i)
         json_text=get_html(url,headers)
-        # print(json_text)
+        print(json_text)
         doctor_list=parse(json_text)
-        print(doctor_list)
+        # print(doctor_list)
         # 保存至csv文件中
         # 将数据写入CSV文件
         with open('./datas/'+csv_file, 'a', newline='', encoding='utf-8') as f:
